@@ -9,11 +9,14 @@ jobs:
       - uses: 'actions/checkout@v1'
       
       - name: 👋🏼 'Say Hello'
-        run: echo "Hi from ${{github.workflow}} on ${{github.event_name}} executed by ${{github.actor}}"
+        run: | 
+          echo "Hi from ${{github.workflow}} on ${{github.event_name}} executed by ${{github.actor}}"
+          echo "Say Hello done!"
 
-      - name: 'Env variable'
+      - name: ✏️ 'Env variable'
         env: 
           MY_SUPER_VARIABLE: 'I am Gegi and... you are dead'
         run: |
           echo "$MY_SUPER_VARIABLE"
           echo "${{ toJson(job) }}"
+          "echo Env variable done!"
