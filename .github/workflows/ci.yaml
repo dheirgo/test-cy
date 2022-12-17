@@ -20,3 +20,9 @@ jobs:
           echo "$MY_SUPER_VARIABLE"
           echo "${{ toJson(job) }}"
           echo "Env variable done!"
+
+      - name: 💾 'Install dependencies'
+        run: npm install
+        
+      - name: 🚨 'Execute tests'
+        run: npm run test
